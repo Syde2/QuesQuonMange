@@ -1,0 +1,59 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+
+// EXPORTE L ENSEMBLE DES COULEURS DU NORD THEME
+:root {
+  //Polar Night
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+
+  // Snow Storm
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+
+  //Frost
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+
+  //Aurora
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+}
+
+$primary: var(--nord1);
+$secondary: var(--nord3);
+$dark: var(--nord1);
+$accent: var(--nord9); //#5e81ac
+$info: var(--nord13);
+$warning: var(--nord12);
+$positive: var(--nord8);
+$negative: var(--nord11);
+
+// AJOUTE UNE COULEUR CONTRAST
+.text-contrast {
+  color: var(--nord4) !important;
+}
+.bg-contrast {
+  background: var(--nord4) !important;
+}
+
+// AJOUTE UNE COULEUR THEME
+.text-theme {
+  color: var(--nord3) !important;
+}
+.bg-theme {
+  background: var(--nord3) !important;
+}
+
+body {
+  background-color: var(--nord3);
+  background-image: linear-gradient(147deg, var(--nord3) 0%, var(--nord0) 74%);
+}
