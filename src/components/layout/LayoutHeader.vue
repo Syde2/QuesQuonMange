@@ -5,8 +5,8 @@ console.log(router)
 </script>
 
 <template>
-  <q-header >
-    <q-toolbar>
+  <q-header  bordered elevated >
+    <q-toolbar >
       <a href="/">
       <q-avatar  class="cursor-pointer" > Q </q-avatar>
     </a>
