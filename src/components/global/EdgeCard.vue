@@ -22,7 +22,7 @@ const image = `url(${props.imageUrl})`
 
 <div class="box_parent ">
     <div class="box2 reverse">
-      <h3> {{props.label}} </h3>
+      <h2> {{props.label}} </h2>
     </div>
     <div class="box2 background">
 
@@ -31,7 +31,7 @@ const image = `url(${props.imageUrl})`
         <defs>
             <filter id="flt_tag">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 29 -8" result="flt_tag" />
                 <feComposite in="SourceGraphic" in2="flt_tag" operator="atop"/>
             </filter>
         </defs>
@@ -44,7 +44,7 @@ const image = `url(${props.imageUrl})`
 
 <style lang="scss">
 .box2{
-    width: 322px;
+    width:20rem;
     background-color: v-bind(color);
     height: 229px;
     clip-path: polygon(100% 100%,0% 100%,0% 62px,100% 0%);
@@ -56,13 +56,12 @@ const image = `url(${props.imageUrl})`
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-
 }
 .reverse{
   rotate: 180deg;
 
 }
-.reverse h3{
+.reverse h2{
   transform: scale(-1, -1);
 
 }

@@ -1,11 +1,10 @@
 <script setup>
 import router from 'src/router/routes';
 
-console.log(router)
 </script>
 
 <template>
-  <q-header  bordered elevated >
+  <q-header  class="bg-transparent" >
     <q-toolbar >
       <a href="/">
       <q-avatar  class="cursor-pointer" > Q </q-avatar>
