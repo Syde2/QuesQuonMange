@@ -1,68 +1,23 @@
 <script setup>
-import { ref } from 'vue'
-import { gsap, timeline } from 'boot/gsap'
 
 const props = defineProps({
-  imageUrl: {
+  imageUrl: String,
+  label:String,
+  color: String,
+  path: {
     type: String,
-    default: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=2810&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    default: '/'
   },
-  label: {
-    type: String,
-    default: 'Label'
-  },
-  color: String
 })
+
 const image = `url(${props.imageUrl})`
-const menu = ref(false)
-const element = ref()
-
-
-
-function onEnter(el, done) {
-  element.value =el
-   timeline.fromTo(el, {
-    y:10,
-    yoyo: true,
-    repeat:-1,
-    ease: "power1.inOut",
-    duration:1,
-  },
-  {
-    y:-10,
-    yoyo: true,
-    repeat:-1,
-    ease: "power1.inOut",
-    duration:1,
-    onComplete: done,
-  }
-
-  )
-}
-
-function handleHover() {
- menu.value = true
- timeline.resume()
-}
-
-function handleMouseOut(){
-  timeline.pause()
-  menu.value = false
-}
-
-function handleClick(){
-  timeline.to(element, {
-    scaleX:1, width:100
-  })
-
-}
-
 
 </script>
 
 <template>
-  <Transition @enter="onEnter" :css="false">
-    <div :key="menu"  @mouseover="handleHover" @mouseleave="handleMouseOut" @click="handleClick" class="box_parent ">
+  <RouterLink :to=props.path>
+
+    <div class="box_parent ">
       <div class="box2 reverse">
         <h2> {{ props.label }} </h2>
       </div>
@@ -80,7 +35,8 @@ function handleClick(){
         </defs>
       </svg>
     </div>
-  </Transition>
+  </RouterLink>
+
 </template>
 
 <style lang="scss">
