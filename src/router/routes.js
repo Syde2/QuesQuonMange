@@ -5,9 +5,9 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: '/menu', component: () => import('pages/MenuPage.vue') },
-      { path: '/ingredients', component: () => import('pages/IngredientsPage.vue') },
-      { path: '/plats', component: () => import('pages/PlatsPage.vue') },
+      { path: '/menu', name:'menu', component: () => import('pages/MenuPage.vue') },
+      { path: '/ingredients', name:'ingredients', component: () => import('pages/IngredientsPage.vue') },
+      { path: '/plats', name:'plats', component: () => import('pages/PlatsPage.vue') },
     ]
   },
 

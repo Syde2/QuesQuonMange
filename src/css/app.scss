@@ -8,3 +8,12 @@ body{
 h1, h2, h3,h4{
   color: var(--nord2);
 }
+
+.bg-title{
+  font-size:15rem;
+  position: absolute;
+  z-index: -1;
+}
+.bg-title::first-letter{
+  font-size: 25rem;
+}
