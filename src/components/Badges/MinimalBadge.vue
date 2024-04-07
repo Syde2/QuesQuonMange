@@ -2,7 +2,8 @@
 
 const props = defineProps({
   icon : String,
-  tooltip:String
+  tooltip:String,
+  color:String,
 
 })
 
@@ -14,7 +15,7 @@ const props = defineProps({
     <q-tooltip  :delay="700" class=" text-body2" transition-show="fade" transition-hide="fade" >  {{ props.tooltip }} </q-tooltip>
     <q-avatar round size="xl" >
 
-      <q-icon :name=props.icon >
+      <q-icon  :name=props.icon >
       </q-icon>
       <!-- <q-badge floating color="teal">new</q-badge> -->
     </q-avatar>
