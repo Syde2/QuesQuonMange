@@ -31,7 +31,7 @@ const dynamicComponent = computed(() => {
 const splitterModel = computed(() => {
       return $q.screen.lt.md
         ? 0
-        : 40
+        : 35
     })
 
 
@@ -58,14 +58,3 @@ const splitterModel = computed(() => {
     </q-splitter>
   </q-page>
 </template>
-
-<style scoped>
-/* .bar {
-  border-bottom: 3px solid;
-  width: 90vw !important;
-
-} */
-
-
-</style>
-

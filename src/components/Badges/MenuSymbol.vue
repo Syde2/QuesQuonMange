@@ -14,8 +14,8 @@ const defaultMenu = [
 
 function Massonry(index){
   switch (index) {
-    case 0:
-      return 'col-md-5'
+    case 5:
+      return 'col-md-2'
       break;
     case 6:
       return 'col-md-2'
@@ -32,8 +32,8 @@ function Massonry(index){
 <template>
   <h1 class="bg-title">Menu</h1>
 
-  <div class="row  q-gutter-sm">
-    <div class="col-12 col-md" :class="Massonry(index)"  v-for=" (each, index) in defaultMenu" :key="each.jour" >
+  <div class="row  fit q-pa-md q-gutter-x-md ">
+    <div class="col-12 " :class="Massonry(index)"  v-for=" (each, index) in defaultMenu" :key="each.jour" >
       <MenuCard :content="each" />
     </div>
   </div>
@@ -43,6 +43,6 @@ function Massonry(index){
 
 <style scoped lang="scss">
 .col-12 {
-height: 20vh;
+  height: 20vh;
 }
 </style>
