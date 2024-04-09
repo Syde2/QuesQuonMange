@@ -3,21 +3,19 @@ import { computed, ref } from 'vue'
 import { useQuasar } from 'quasar'
 import HorizontalSplitter from 'src/components/Index/HorizontalSplitter.vue'
 import MainMenu from 'src/components/Index/MainMenu.vue'
-import MenuSymbol from 'src/components/Badges/MenuSymbol.vue'
-import IngredientsSymbol from 'src/components/Badges/IngredientsSymbol.vue';
-import PlatsSymbol from 'src/components/Badges/PlatsSymbol.vue';
+import * as D from 'src/components/Dynamic'
 
 const currentSelection = ref('menu')
 const dynamicComponent = computed(() => {
   switch (currentSelection.value) {
     case 'menu':
-      return MenuSymbol
+      return D.Menu
       break;
     case 'ingredients':
-      return IngredientsSymbol
+      return D.Ingredients
       break;
     case 'plats':
-      return PlatsSymbol
+      return D.Plats
       break;
 
 
