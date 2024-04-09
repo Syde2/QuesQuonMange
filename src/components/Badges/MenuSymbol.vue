@@ -14,7 +14,7 @@ const defaultMenu = [
 
 function Massonry(index){
   switch (index) {
-    case 5:
+    case 3:
       return 'col-md-2'
       break;
     case 6:

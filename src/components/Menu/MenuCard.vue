@@ -1,4 +1,5 @@
 <script setup>
+import MenuItem from 'src/components/Menu/MenuItem.vue'
 
 const props = defineProps({
   content: Object
@@ -8,19 +9,16 @@ const props = defineProps({
 </script>
 
 <template>
-  <q-card class="card flat square">
-    <q-card-section horizontal class="fit flex justify-end " >
+  <q-card class="card flat square ">
+    <q-card-section horizontal class="row fit" >
+      <q-card-section class="col-10 q-pa-md">
+        <MenuItem  label="Pates au Saumon" icon="sym_s_set_meal" />
+        <MenuItem  label=" Lasagnes" />
 
-      <q-card-section class="">
-        <q-item class="q-pa-md  full-width"  style="border: 1px solid white; border-radius: 5px;" >
-          Lorem ipsum dolor sit amet.
-        </q-item>
-        <q-item class="q-pa-md  full-width" style="border: 1px solid white; border-radius: 5px;"   >
-          Lorem ipsum dolor sit amet.
-        </q-item>
+
       </q-card-section>
 
-      <q-card-section class="title">
+      <q-card-section class="title col-2  ">
         {{ props.content.jour }}
       </q-card-section>
 
@@ -34,13 +32,11 @@ const props = defineProps({
   font-size: 1.6rem;
   writing-mode: vertical-rl;
   text-orientation: use-glyph-orientation;
-  width: 5rem;
-  justify-self: end;
 }
 
 .card{
   background-color: rgba(251, 251, 251, 0.05);
   backdrop-filter: blur(5px);
-  height: 100%;
+  height: 150px;
 }
 </style>
