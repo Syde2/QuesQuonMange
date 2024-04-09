@@ -9,8 +9,6 @@ import PlatsSymbol from 'src/components/Badges/PlatsSymbol.vue';
 const $q = useQuasar()
 const currentSelection = ref('menu')
 
-
-
 const dynamicComponent = computed(() => {
   switch (currentSelection.value) {
     case 'menu':
