@@ -1,3 +1,3 @@
-export {default as Ingredients} from "./Ingredients.vue";
+export {default as Planifier} from "./Planifier.vue";
 export {default as Menu} from './Menu.vue'
-export {default as Plats} from './Plats.vue'
+export {default as Parametrer} from './Parametrer.vue'

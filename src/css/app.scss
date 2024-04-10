@@ -10,10 +10,11 @@ h1, h2, h3,h4{
 }
 
 .bg-title{
-  font-size:15rem;
+  font-size:12rem;
   position: absolute;
   z-index: -1;
 }
 .bg-title::first-letter{
-  font-size: 25rem;
+  font-size: 20rem;
+  text-transform: capitalize;
 }

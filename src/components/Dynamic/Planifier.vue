@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <h1 class="bg-title" >Plats</h1>
+  <div>
+    PLANIFIER
+  </div>
 </template>
-
-

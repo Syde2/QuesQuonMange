@@ -5,17 +5,17 @@ import HorizontalSplitter from 'src/components/Index/HorizontalSplitter.vue'
 import MainMenu from 'src/components/Index/MainMenu.vue'
 import * as D from 'src/components/Dynamic'
 
-const currentSelection = ref('menu')
+const currentSelection = ref()
 const dynamicComponent = computed(() => {
   switch (currentSelection.value) {
-    case 'menu':
+    case 'consulter':
       return D.Menu
       break;
-    case 'ingredients':
-      return D.Ingredients
+    case 'planifier':
+      return D.Planifier
       break;
-    case 'plats':
-      return D.Plats
+    case 'parametrer':
+      return D.Parametrer
       break;
 
 

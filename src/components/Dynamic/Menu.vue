@@ -30,14 +30,11 @@ function Massonry(index){
 </script>
 
 <template>
-  <h1 class="bg-title">Menu</h1>
-
   <div class="row  fit q-pa-md q-gutter-x-md ">
     <div class="col-12 " :class="Massonry(index)"  v-for=" (each, index) in defaultMenu" :key="each.jour" >
       <MenuCard :content="each" />
     </div>
   </div>
-
 </template>
 
 
