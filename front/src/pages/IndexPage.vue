@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { api } from 'src/boot/axios'
 import { useQuasar } from 'quasar'
 import HorizontalSplitter from 'src/components/Index/HorizontalSplitter.vue'
 import MainMenu from 'src/components/Index/MainMenu.vue'
@@ -23,6 +24,8 @@ const dynamicComponent = computed(() => {
       break;
   }
 })
+
+api.get('plats')
 
 
 </script>
