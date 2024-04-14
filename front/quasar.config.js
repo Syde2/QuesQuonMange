@@ -12,7 +12,7 @@
 const { configure } = require('quasar/wrappers');
 
 
-module.exports = configure(function (/* ctx */) {
+module.exports = configure(function (ctx) {
   return {
 
 
@@ -90,7 +90,7 @@ module.exports = configure(function (/* ctx */) {
     devServer: {
       // https: true
       open: true,
-      port:8000,
+      port:8080,
 
     },
 
