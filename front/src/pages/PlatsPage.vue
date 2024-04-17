@@ -1,25 +1,14 @@
 <script setup>
-import { api } from 'src/boot/axios'
 import { ref, onBeforeMount } from 'vue';
-import DynamicForm from 'src/components/Form/DynamicForm.vue'
-
+import { getAllPlats } from 'src/composables/ApiProvider';
+import ModelList from 'src/components/Model/ModelList.vue';
 const plats = ref()
-const model = ref({})
 
 
 
 onBeforeMount(async () => {
-  const request = await api.get('plats');
-  plats.value = request.data['hydra:member']
+  plats.value =await getAllPlats()
 })
-
- function handleSubmit(){
-  console.log('SUBMIT')
- api.post("/plats", model.value)
- .then(()=> model.value = {} )
- .catch(err=> console.error(err.response.data) )
-
-}
 
 
 </script>
@@ -28,9 +17,7 @@ onBeforeMount(async () => {
   <q-page class="flex flex-center column">
 
     <div class="flex column">
-
-      <DynamicForm @submit="handleSubmit" v-model:nom="model.nom" v-model:description="model.description"
-        v-model:illustration="model.illustration" />
+      <ModelList :list="plats" />
 
 
 
